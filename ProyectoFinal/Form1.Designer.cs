@@ -37,6 +37,9 @@
             this.eliminarHuspedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeHotelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verReporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.habitacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.habitacionSimpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.habitacionDoblesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +69,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarToolStripMenuItem,
-            this.reporteDeHotelToolStripMenuItem});
+            this.reporteDeHotelToolStripMenuItem,
+            this.habitacionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(677, 28);
@@ -109,6 +113,27 @@
             this.verReporteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.verReporteToolStripMenuItem.Text = "Ver Reporte";
             // 
+            // habitacionesToolStripMenuItem
+            // 
+            this.habitacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.habitacionSimpleToolStripMenuItem,
+            this.habitacionDoblesToolStripMenuItem});
+            this.habitacionesToolStripMenuItem.Name = "habitacionesToolStripMenuItem";
+            this.habitacionesToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
+            this.habitacionesToolStripMenuItem.Text = "Habitaciones";
+            // 
+            // habitacionSimpleToolStripMenuItem
+            // 
+            this.habitacionSimpleToolStripMenuItem.Name = "habitacionSimpleToolStripMenuItem";
+            this.habitacionSimpleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.habitacionSimpleToolStripMenuItem.Text = "Habitacion Simple";
+            // 
+            // habitacionDoblesToolStripMenuItem
+            // 
+            this.habitacionDoblesToolStripMenuItem.Name = "habitacionDoblesToolStripMenuItem";
+            this.habitacionDoblesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.habitacionDoblesToolStripMenuItem.Text = "Habitacion Dobles";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -139,5 +164,8 @@
         private ToolStripMenuItem eliminarHuspedToolStripMenuItem;
         private ToolStripMenuItem reporteDeHotelToolStripMenuItem;
         private ToolStripMenuItem verReporteToolStripMenuItem;
+        private ToolStripMenuItem habitacionesToolStripMenuItem;
+        private ToolStripMenuItem habitacionSimpleToolStripMenuItem;
+        private ToolStripMenuItem habitacionDoblesToolStripMenuItem;
     }
 }
