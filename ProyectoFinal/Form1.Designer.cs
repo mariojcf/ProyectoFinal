@@ -39,7 +39,6 @@
             this.verReporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.habitacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.habitacionSimpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.habitacionDoblesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -89,14 +88,14 @@
             // RegistrarHuesped
             // 
             this.RegistrarHuesped.Name = "RegistrarHuesped";
-            this.RegistrarHuesped.Size = new System.Drawing.Size(224, 26);
+            this.RegistrarHuesped.Size = new System.Drawing.Size(214, 26);
             this.RegistrarHuesped.Text = "Registrar Huesped";
             this.RegistrarHuesped.Click += new System.EventHandler(this.RegistrarHuesped_Click);
             // 
             // eliminarHuspedToolStripMenuItem
             // 
             this.eliminarHuspedToolStripMenuItem.Name = "eliminarHuspedToolStripMenuItem";
-            this.eliminarHuspedToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.eliminarHuspedToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.eliminarHuspedToolStripMenuItem.Text = "Eliminar Husped ";
             // 
             // reporteDeHotelToolStripMenuItem
@@ -110,29 +109,24 @@
             // verReporteToolStripMenuItem
             // 
             this.verReporteToolStripMenuItem.Name = "verReporteToolStripMenuItem";
-            this.verReporteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.verReporteToolStripMenuItem.Size = new System.Drawing.Size(170, 26);
             this.verReporteToolStripMenuItem.Text = "Ver Reporte";
+            this.verReporteToolStripMenuItem.Click += new System.EventHandler(this.verReporteToolStripMenuItem_Click);
             // 
             // habitacionesToolStripMenuItem
             // 
             this.habitacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.habitacionSimpleToolStripMenuItem,
-            this.habitacionDoblesToolStripMenuItem});
+            this.habitacionSimpleToolStripMenuItem});
             this.habitacionesToolStripMenuItem.Name = "habitacionesToolStripMenuItem";
-            this.habitacionesToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
-            this.habitacionesToolStripMenuItem.Text = "Habitaciones";
+            this.habitacionesToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
+            this.habitacionesToolStripMenuItem.Text = "Salon de Eventos ";
             // 
             // habitacionSimpleToolStripMenuItem
             // 
             this.habitacionSimpleToolStripMenuItem.Name = "habitacionSimpleToolStripMenuItem";
             this.habitacionSimpleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.habitacionSimpleToolStripMenuItem.Text = "Habitacion Simple";
-            // 
-            // habitacionDoblesToolStripMenuItem
-            // 
-            this.habitacionDoblesToolStripMenuItem.Name = "habitacionDoblesToolStripMenuItem";
-            this.habitacionDoblesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.habitacionDoblesToolStripMenuItem.Text = "Habitacion Dobles";
+            this.habitacionSimpleToolStripMenuItem.Text = "Realizar reservacion";
+            this.habitacionSimpleToolStripMenuItem.Click += new System.EventHandler(this.habitacionSimpleToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -144,7 +138,9 @@
             this.Controls.Add(this.pictureBox1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(695, 473);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(695, 473);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -166,6 +162,5 @@
         private ToolStripMenuItem verReporteToolStripMenuItem;
         private ToolStripMenuItem habitacionesToolStripMenuItem;
         private ToolStripMenuItem habitacionSimpleToolStripMenuItem;
-        private ToolStripMenuItem habitacionDoblesToolStripMenuItem;
     }
 }

@@ -12,10 +12,13 @@ namespace ProyectoFinal
 {
     public partial class Registrar : Form
     {
+        
+        bool verificado;
         public Registrar()
         {
             InitializeComponent();
         }
+
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
@@ -28,6 +31,11 @@ namespace ProyectoFinal
             int tieneNinos = (int)chkNinos.Value;
             // Calcular la cantidad de noches que se van a hospedar
             int noches = (int)(fechaSalida - fechaIngreso).TotalDays;
+            //Recordatorio 
+            lblRecordatorio.Text = "El check-in para las habitaciones es a las 15hrs y el check-out es a las 13hrs.";
+            lblRecordatorio.Visible = true;
+            verificado = true;
+
             // Validar que se hayan ingresado los valores requeridos
             if (string.IsNullOrWhiteSpace(nombreCompleto) || string.IsNullOrWhiteSpace(telefono))
             {
@@ -40,6 +48,11 @@ namespace ProyectoFinal
                 nombreCompleto, telefono, fechaIngreso.ToString("dd/MM/yyyy"), fechaSalida.ToString("dd/MM/yyyy"), numPersonas + tieneNinos, tieneNinos >0 ?"Sí" : "No");
             string mensaje2 = string.Format("");
             MessageBox.Show(mensaje);
+
+        }
+
+        private void chkAdultos_ValueChanged(object sender, EventArgs e)
+        {
         }
     }
 }

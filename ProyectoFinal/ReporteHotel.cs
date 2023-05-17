@@ -16,5 +16,10 @@ namespace ProyectoFinal
         {
             InitializeComponent();
         }
+
+        private void VerReporte_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrar));
             this.txtNombreCompleto = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblNumero = new System.Windows.Forms.Label();
@@ -41,8 +42,11 @@
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.chkNinos = new System.Windows.Forms.NumericUpDown();
+            this.lblRecordatorio = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.chkAdultos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkNinos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombreCompleto
@@ -55,6 +59,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblNombre.Location = new System.Drawing.Point(43, 56);
             this.lblNombre.Name = "lblNombre";
@@ -119,6 +124,7 @@
             this.chkAdultos.Name = "chkAdultos";
             this.chkAdultos.Size = new System.Drawing.Size(91, 27);
             this.chkAdultos.TabIndex = 10;
+            this.chkAdultos.ValueChanged += new System.EventHandler(this.chkAdultos_ValueChanged);
             // 
             // label3
             // 
@@ -158,12 +164,35 @@
             this.chkNinos.Size = new System.Drawing.Size(91, 27);
             this.chkNinos.TabIndex = 13;
             // 
+            // lblRecordatorio
+            // 
+            this.lblRecordatorio.AutoSize = true;
+            this.lblRecordatorio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblRecordatorio.Location = new System.Drawing.Point(43, 412);
+            this.lblRecordatorio.Name = "lblRecordatorio";
+            this.lblRecordatorio.Size = new System.Drawing.Size(106, 20);
+            this.lblRecordatorio.TabIndex = 15;
+            this.lblRecordatorio.Text = "Recordatorio";
+            this.lblRecordatorio.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(624, 516);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // Registrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gold;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(619, 506);
+            this.Controls.Add(this.lblRecordatorio);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.chkNinos);
             this.Controls.Add(this.btnRegistrar);
@@ -177,12 +206,16 @@
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtNombreCompleto);
+            this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(637, 553);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(637, 553);
             this.Name = "Registrar";
             this.Text = "Registrar";
             ((System.ComponentModel.ISupportInitialize)(this.chkAdultos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkNinos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +236,7 @@
         private Button btnRegistrar;
         private Label label4;
         private NumericUpDown chkNinos;
+        private Label lblRecordatorio;
+        private PictureBox pictureBox1;
     }
 }
