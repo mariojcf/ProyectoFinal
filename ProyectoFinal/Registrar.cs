@@ -59,6 +59,38 @@ namespace ProyectoFinal
 
         private void chkAdultos_ValueChanged(object sender, EventArgs e)
         {
+            int cantidad = decimal.ToInt32(chkAdultos.Value);
+            int mod = cantidad % 4;
+
+            int tipohabitacion;
+            if (mod == 0)
+            {
+                tipohabitacion = cantidad / 4;
+                MessageBox.Show("Puede reservar " + tipohabitacion.ToString() + " habitaciones dobles para " + cantidad.ToString() + " personas");
+            }
+            else if (cantidad / 4 < 0)
+            {
+                if (cantidad == 3)
+                {
+                    MessageBox.Show("Puede reservar 2 habitaciones simples o 1 habitación doble para " + cantidad.ToString() + " personas");
+                }
+                else
+                {
+                    MessageBox.Show("Puede reservar 1 habitación simple para " + cantidad.ToString() + "  personas");
+                }
+            }
+            else
+            {
+                tipohabitacion = (cantidad - mod) / 4;
+                if (mod == 3)
+                {
+                    MessageBox.Show("Puede reservar " + tipohabitacion.ToString() + " habitaciones dobles y 2 simples para " + cantidad.ToString() + "  personas");
+                }
+                else
+                {
+                    MessageBox.Show("Puede reservar " + tipohabitacion.ToString() + " habitaciones dobles y 1 simple para " + cantidad.ToString() + "  personas");
+                }
+            }
         }
     }
 }
