@@ -29,196 +29,218 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrar));
-            this.txtNombreCompleto = new System.Windows.Forms.TextBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblNumero = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.dtFechaIngreso = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtFechaSalida = new System.Windows.Forms.DateTimePicker();
-            this.chkAdultos = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnRegistrar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.chkNinos = new System.Windows.Forms.NumericUpDown();
-            this.lblRecordatorio = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.chkAdultos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkNinos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            txtNombreCompleto = new TextBox();
+            lblNombre = new Label();
+            lblNumero = new Label();
+            txtTelefono = new TextBox();
+            dtFechaIngreso = new DateTimePicker();
+            label1 = new Label();
+            label2 = new Label();
+            dtFechaSalida = new DateTimePicker();
+            chkAdultos = new NumericUpDown();
+            label3 = new Label();
+            btnRegistrar = new Button();
+            label4 = new Label();
+            chkNinos = new NumericUpDown();
+            lblRecordatorio = new Label();
+            pictureBox1 = new PictureBox();
+            lblCorreo = new Label();
+            txtCorreo = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)chkAdultos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chkNinos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // txtNombreCompleto
             // 
-            this.txtNombreCompleto.Location = new System.Drawing.Point(261, 57);
-            this.txtNombreCompleto.Name = "txtNombreCompleto";
-            this.txtNombreCompleto.Size = new System.Drawing.Size(238, 27);
-            this.txtNombreCompleto.TabIndex = 0;
+            txtNombreCompleto.Location = new Point(261, 22);
+            txtNombreCompleto.Name = "txtNombreCompleto";
+            txtNombreCompleto.Size = new Size(238, 27);
+            txtNombreCompleto.TabIndex = 0;
             // 
             // lblNombre
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNombre.Location = new System.Drawing.Point(43, 56);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(162, 25);
-            this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "Nombre Completo";
+            lblNombre.AutoSize = true;
+            lblNombre.BackColor = Color.Transparent;
+            lblNombre.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNombre.Location = new Point(43, 22);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(162, 25);
+            lblNombre.TabIndex = 1;
+            lblNombre.Text = "Nombre Completo";
             // 
             // lblNumero
             // 
-            this.lblNumero.AutoSize = true;
-            this.lblNumero.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNumero.Location = new System.Drawing.Point(43, 117);
-            this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(173, 25);
-            this.lblNumero.TabIndex = 3;
-            this.lblNumero.Text = "Numero de telefono";
+            lblNumero.AutoSize = true;
+            lblNumero.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNumero.Location = new Point(43, 78);
+            lblNumero.Name = "lblNumero";
+            lblNumero.Size = new Size(173, 25);
+            lblNumero.TabIndex = 3;
+            lblNumero.Text = "Numero de telefono";
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(261, 118);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(238, 27);
-            this.txtTelefono.TabIndex = 2;
+            txtTelefono.Location = new Point(261, 79);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(238, 27);
+            txtTelefono.TabIndex = 2;
+            txtTelefono.TextChanged += txtTelefono_TextChanged;
             // 
             // dtFechaIngreso
             // 
-            this.dtFechaIngreso.Location = new System.Drawing.Point(261, 184);
-            this.dtFechaIngreso.Name = "dtFechaIngreso";
-            this.dtFechaIngreso.Size = new System.Drawing.Size(295, 27);
-            this.dtFechaIngreso.TabIndex = 6;
+            dtFechaIngreso.Location = new Point(261, 184);
+            dtFechaIngreso.Name = "dtFechaIngreso";
+            dtFechaIngreso.Size = new Size(295, 27);
+            dtFechaIngreso.TabIndex = 6;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(43, 186);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 25);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Fecha de Ingreso";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(43, 186);
+            label1.Name = "label1";
+            label1.Size = new Size(147, 25);
+            label1.TabIndex = 7;
+            label1.Text = "Fecha de Ingreso";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(43, 247);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 25);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Fecha de Salida";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(43, 247);
+            label2.Name = "label2";
+            label2.Size = new Size(134, 25);
+            label2.TabIndex = 8;
+            label2.Text = "Fecha de Salida";
             // 
             // dtFechaSalida
             // 
-            this.dtFechaSalida.Location = new System.Drawing.Point(261, 247);
-            this.dtFechaSalida.Name = "dtFechaSalida";
-            this.dtFechaSalida.Size = new System.Drawing.Size(295, 27);
-            this.dtFechaSalida.TabIndex = 9;
+            dtFechaSalida.Location = new Point(261, 247);
+            dtFechaSalida.Name = "dtFechaSalida";
+            dtFechaSalida.Size = new Size(295, 27);
+            dtFechaSalida.TabIndex = 9;
             // 
             // chkAdultos
             // 
-            this.chkAdultos.Location = new System.Drawing.Point(261, 307);
-            this.chkAdultos.Name = "chkAdultos";
-            this.chkAdultos.Size = new System.Drawing.Size(91, 27);
-            this.chkAdultos.TabIndex = 10;
-            this.chkAdultos.ValueChanged += new System.EventHandler(this.chkAdultos_ValueChanged);
+            chkAdultos.Location = new Point(261, 307);
+            chkAdultos.Name = "chkAdultos";
+            chkAdultos.Size = new Size(91, 27);
+            chkAdultos.TabIndex = 10;
+            chkAdultos.ValueChanged += chkAdultos_ValueChanged;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(43, 305);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 25);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Adultos";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(43, 305);
+            label3.Name = "label3";
+            label3.Size = new Size(74, 25);
+            label3.TabIndex = 11;
+            label3.Text = "Adultos";
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.btnRegistrar.Location = new System.Drawing.Point(430, 434);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(126, 40);
-            this.btnRegistrar.TabIndex = 12;
-            this.btnRegistrar.Text = "Guardar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            btnRegistrar.Font = new Font("Segoe UI", 13.8F, FontStyle.Italic, GraphicsUnit.Point);
+            btnRegistrar.Location = new Point(430, 434);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new Size(126, 40);
+            btnRegistrar.TabIndex = 12;
+            btnRegistrar.Text = "Guardar";
+            btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(46, 354);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 25);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Niños";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(46, 354);
+            label4.Name = "label4";
+            label4.Size = new Size(58, 25);
+            label4.TabIndex = 14;
+            label4.Text = "Niños";
             // 
             // chkNinos
             // 
-            this.chkNinos.Location = new System.Drawing.Point(264, 356);
-            this.chkNinos.Name = "chkNinos";
-            this.chkNinos.Size = new System.Drawing.Size(91, 27);
-            this.chkNinos.TabIndex = 13;
+            chkNinos.Location = new Point(264, 356);
+            chkNinos.Name = "chkNinos";
+            chkNinos.Size = new Size(91, 27);
+            chkNinos.TabIndex = 13;
             // 
             // lblRecordatorio
             // 
-            this.lblRecordatorio.AutoSize = true;
-            this.lblRecordatorio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblRecordatorio.Location = new System.Drawing.Point(43, 412);
-            this.lblRecordatorio.Name = "lblRecordatorio";
-            this.lblRecordatorio.Size = new System.Drawing.Size(106, 20);
-            this.lblRecordatorio.TabIndex = 15;
-            this.lblRecordatorio.Text = "Recordatorio";
-            this.lblRecordatorio.Visible = false;
+            lblRecordatorio.AutoSize = true;
+            lblRecordatorio.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblRecordatorio.Location = new Point(43, 412);
+            lblRecordatorio.Name = "lblRecordatorio";
+            lblRecordatorio.Size = new Size(106, 20);
+            lblRecordatorio.TabIndex = 15;
+            lblRecordatorio.Text = "Recordatorio";
+            lblRecordatorio.Visible = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(624, 516);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackColor = SystemColors.ButtonHighlight;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(-1, -8);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(624, 516);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 16;
+            pictureBox1.TabStop = false;
+            // 
+            // lblCorreo
+            // 
+            lblCorreo.AutoSize = true;
+            lblCorreo.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCorreo.Location = new Point(43, 134);
+            lblCorreo.Name = "lblCorreo";
+            lblCorreo.Size = new Size(157, 25);
+            lblCorreo.TabIndex = 17;
+            lblCorreo.Text = "Correo Electronico";
+            // 
+            // txtCorreo
+            // 
+            txtCorreo.Location = new Point(261, 132);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(238, 27);
+            txtCorreo.TabIndex = 18;
+            txtCorreo.TextChanged += txtCorreo_TextChanged;
             // 
             // Registrar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(619, 506);
-            this.Controls.Add(this.lblRecordatorio);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.chkNinos);
-            this.Controls.Add(this.btnRegistrar);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.chkAdultos);
-            this.Controls.Add(this.dtFechaSalida);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dtFechaIngreso);
-            this.Controls.Add(this.lblNumero);
-            this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.txtNombreCompleto);
-            this.Controls.Add(this.pictureBox1);
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(637, 553);
-            this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(637, 553);
-            this.Name = "Registrar";
-            this.Text = "Registrar";
-            ((System.ComponentModel.ISupportInitialize)(this.chkAdultos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkNinos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GradientActiveCaption;
+            ClientSize = new Size(619, 506);
+            Controls.Add(txtCorreo);
+            Controls.Add(lblCorreo);
+            Controls.Add(lblRecordatorio);
+            Controls.Add(label4);
+            Controls.Add(chkNinos);
+            Controls.Add(btnRegistrar);
+            Controls.Add(label3);
+            Controls.Add(chkAdultos);
+            Controls.Add(dtFechaSalida);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(dtFechaIngreso);
+            Controls.Add(lblNumero);
+            Controls.Add(txtTelefono);
+            Controls.Add(lblNombre);
+            Controls.Add(txtNombreCompleto);
+            Controls.Add(pictureBox1);
+            MaximizeBox = false;
+            MaximumSize = new Size(637, 553);
+            MinimizeBox = false;
+            MinimumSize = new Size(637, 553);
+            Name = "Registrar";
+            Text = "Registrar";
+            ((System.ComponentModel.ISupportInitialize)chkAdultos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chkNinos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -238,5 +260,7 @@
         private NumericUpDown chkNinos;
         private Label lblRecordatorio;
         private PictureBox pictureBox1;
+        private Label lblCorreo;
+        private TextBox txtCorreo;
     }
 }

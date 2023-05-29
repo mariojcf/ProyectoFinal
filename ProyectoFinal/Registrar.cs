@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,7 +13,7 @@ namespace ProyectoFinal
 {
     public partial class Registrar : Form
     {
-        
+
         bool verificado;
         public Registrar()
         {
@@ -25,6 +26,7 @@ namespace ProyectoFinal
             // Obtener los valores ingresados por el usuario
             string nombreCompleto = txtNombreCompleto.Text;
             string telefono = txtTelefono.Text;
+            string Correo = txtCorreo.Text;
             DateTime fechaIngreso = dtFechaIngreso.Value;
             DateTime fechaSalida = dtFechaSalida.Value;
             int numPersonas = (int)chkAdultos.Value;
@@ -43,15 +45,15 @@ namespace ProyectoFinal
                 return;
             }
 
-           /* Huesped nuevoHuesped = new Huesped(txtNombreCompleto.Text, txtEmail.Text, txtTelefono.Text);
+            /* Huesped nuevoHuesped = new Huesped(txtNombreCompleto.Text, txtEmail.Text, txtTelefono.Text);
 
-            Nodo nuevoNodo = new Nodo(nuevoHuesped);
+             Nodo nuevoNodo = new Nodo(nuevoHuesped);
 
-            Form1.instance.getListaHuespedes().insertar(nuevoNodo);*/
+             Form1.instance.getListaHuespedes().insertar(nuevoNodo);*/
 
             // Mostrar un mensaje de confirmación con los detalles del registro
-            string mensaje = string.Format("¡Huesped registrado exitosamente!\n\nNombre completo: {0}\nTeléfono: {1}\nFecha de ingreso: {2}\nFecha de salida: {3}\nNúmero de personas: {4}\n¿Tiene niños? {5}",
-                nombreCompleto, telefono, fechaIngreso.ToString("dd/MM/yyyy"), fechaSalida.ToString("dd/MM/yyyy"), numPersonas + tieneNinos, tieneNinos >0 ?"Sí" : "No");
+            string mensaje = string.Format("¡Huesped registrado exitosamente!\n\nNombre completo: {0}\nTeléfono:{1}\nCorreo:  {2}\nFecha de ingreso: {3}\nFecha de salida: {4}\nNúmero de personas: {5}\n¿Tiene niños? {6}",
+                nombreCompleto, telefono, Correo, fechaIngreso.ToString("dd/MM/yyyy"), fechaSalida.ToString("dd/MM/yyyy"), numPersonas + tieneNinos, tieneNinos > 0 ? "Sí" : "No");
             string mensaje2 = string.Format("");
             MessageBox.Show(mensaje);
 
@@ -59,37 +61,68 @@ namespace ProyectoFinal
 
         private void chkAdultos_ValueChanged(object sender, EventArgs e)
         {
-            int cantidad = decimal.ToInt32(chkAdultos.Value);
-            int mod = cantidad % 4;
+            int personas = decimal.ToInt32(chkAdultos.Value);
+            int mod = personas % 4;
 
-            int tipohabitacion;
+            int habitacion;
             if (mod == 0)
             {
-                tipohabitacion = cantidad / 4;
-                MessageBox.Show("Puede reservar " + tipohabitacion.ToString() + " habitaciones dobles para " + cantidad.ToString() + " personas");
+                habitacion = personas / 4;
+                MessageBox.Show("Puede reservar " + habitacion.ToString() + " habitaciones dobles para " + personas.ToString() + " personas");
             }
-            else if (cantidad / 4 < 0)
+            else if (personas / 4 < 0)
             {
-                if (cantidad == 3)
+                if (personas == 3)
                 {
-                    MessageBox.Show("Puede reservar 2 habitaciones simples o 1 habitación doble para " + cantidad.ToString() + " personas");
+                    MessageBox.Show("Puede reservar 2 habitaciones simples o 1 habitación doble para " + personas.ToString() + " personas");
                 }
                 else
                 {
-                    MessageBox.Show("Puede reservar 1 habitación simple para " + cantidad.ToString() + "  personas");
+                    MessageBox.Show("Puede reservar 1 habitación simple para " + personas.ToString() + "  personas");
                 }
             }
             else
             {
-                tipohabitacion = (cantidad - mod) / 4;
+                habitacion = (personas - mod) / 4;
                 if (mod == 3)
                 {
-                    MessageBox.Show("Puede reservar " + tipohabitacion.ToString() + " habitaciones dobles y 2 simples para " + cantidad.ToString() + "  personas");
+                    MessageBox.Show("Puede reservar " + habitacion.ToString() + " habitaciones dobles y 2 simples para " + personas.ToString() + "  personas");
                 }
                 else
                 {
-                    MessageBox.Show("Puede reservar " + tipohabitacion.ToString() + " habitaciones dobles y 1 simple para " + cantidad.ToString() + "  personas");
+                    MessageBox.Show("Puede reservar " + habitacion.ToString() + " habitaciones dobles y 1 simple para " + personas.ToString() + "  personas");
                 }
+            }
+        }
+
+        private void txtCorreo_TextChanged(object sender, EventArgs e)
+        {
+            string correoElectronico = txtCorreo.Text;
+
+            // Patrón de expresión regular para validar el correo electrónico
+            string patron = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$";
+
+            if (Regex.IsMatch(correoElectronico, patron))
+            {
+                MessageBox.Show("El correo electrónico es válido.", "Validación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("El correo electrónico no es válido.", "Validación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+            string telefono = txtTelefono.Text;
+
+            if (telefono.Length != 8)
+            {
+                MessageBox.Show("El número de teléfono debe tener 8 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("El número de teléfono es válido.", "Validación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
