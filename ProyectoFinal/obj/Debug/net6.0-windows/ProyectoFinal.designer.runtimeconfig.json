@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\mario\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\mario\\.nuget\\packages",
+      "C:\\Users\\MarioCorado\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\MarioCorado\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

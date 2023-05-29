@@ -43,6 +43,12 @@ namespace ProyectoFinal
                 return;
             }
 
+           /* Huesped nuevoHuesped = new Huesped(txtNombreCompleto.Text, txtEmail.Text, txtTelefono.Text);
+
+            Nodo nuevoNodo = new Nodo(nuevoHuesped);
+
+            Form1.instance.getListaHuespedes().insertar(nuevoNodo);*/
+
             // Mostrar un mensaje de confirmación con los detalles del registro
             string mensaje = string.Format("¡Huesped registrado exitosamente!\n\nNombre completo: {0}\nTeléfono: {1}\nFecha de ingreso: {2}\nFecha de salida: {3}\nNúmero de personas: {4}\n¿Tiene niños? {5}",
                 nombreCompleto, telefono, fechaIngreso.ToString("dd/MM/yyyy"), fechaSalida.ToString("dd/MM/yyyy"), numPersonas + tieneNinos, tieneNinos >0 ?"Sí" : "No");
