@@ -94,7 +94,7 @@ namespace ProyectoFinal
             do
             {
                 Reservacion Salon = actual.getReservacion();
-                message += "Nombre de la reservacion:\t" + Salon.getNombre() + " \nNumero de telefono:\t" + Salon.getNumero() + "\n\n";
+                message += "Nombre de :\t" + Salon.getNombre() + " \nNumero de telefono:\t" + Salon.getNumero() + "\n\n";
                 actual = actual.getSiguiente();
             } while (actual != null && actual != cabeza);
             return message;
@@ -131,6 +131,53 @@ namespace ProyectoFinal
             } while (actual != null && actual != cabeza);
 
             return exists;
+        }
+        public void eliminar(String EliminarHuesped)
+        {
+            String message = "";
+            Nodo actual = this.cabeza;
+            Nodo anterior = null;
+            bool encontrado = false;
+            //int buscar = posicion;
+            if (actual != null)
+            {
+                do
+                {
+                    Husped huesped = actual.getHuesped();
+                    if (huesped.getNombre() == EliminarHuesped)
+                    {
+                        if (actual == cabeza)
+                        {
+                            cabeza = cabeza.getSiguiente();
+                            cabeza.setSiguiente(cola);
+                            cola.setSiguiente(cabeza);
+                        }
+                        else if (actual == cola)
+                        {
+                            cola = anterior;
+                            anterior.setSiguiente(cabeza);
+                            cabeza.setAnterior(cola);
+                        }
+                        else
+                        {
+                            anterior.getSiguiente() = actual.setSiguiente(actual);
+                            actual.getSiguiente().setSiguiente(anterior);
+                        }
+                        Console.WriteLine("\n Nodo eliminado con exito\n");
+                        encontrado = true;
+                    }
+                    anterior = actual;
+                    actual = actual.getSiguiente();
+                } while (actual != cabeza && encontrado != true);
+                if (!encontrado)
+                {
+                    Console.WriteLine("\n No encontrado");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\n La lista se encuentra vacía");
+            }
         }
     }
 }
