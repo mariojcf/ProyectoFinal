@@ -34,7 +34,6 @@
             menuStrip1 = new MenuStrip();
             registrarToolStripMenuItem = new ToolStripMenuItem();
             RegistrarHuesped = new ToolStripMenuItem();
-            eliminarHuspedToolStripMenuItem = new ToolStripMenuItem();
             reporteDeHotelToolStripMenuItem = new ToolStripMenuItem();
             verReporteToolStripMenuItem = new ToolStripMenuItem();
             habitacionesToolStripMenuItem = new ToolStripMenuItem();
@@ -76,7 +75,7 @@
             // 
             // registrarToolStripMenuItem
             // 
-            registrarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { RegistrarHuesped, eliminarHuspedToolStripMenuItem });
+            registrarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { RegistrarHuesped });
             registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
             registrarToolStripMenuItem.Size = new Size(82, 24);
             registrarToolStripMenuItem.Text = "Registrar";
@@ -87,12 +86,6 @@
             RegistrarHuesped.Size = new Size(224, 26);
             RegistrarHuesped.Text = "Registrar Huesped";
             RegistrarHuesped.Click += RegistrarHuesped_Click;
-            // 
-            // eliminarHuspedToolStripMenuItem
-            // 
-            eliminarHuspedToolStripMenuItem.Name = "eliminarHuspedToolStripMenuItem";
-            eliminarHuspedToolStripMenuItem.Size = new Size(224, 26);
-            eliminarHuspedToolStripMenuItem.Text = "Eliminar Husped ";
             // 
             // reporteDeHotelToolStripMenuItem
             // 
@@ -157,7 +150,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem registrarToolStripMenuItem;
         private ToolStripMenuItem RegistrarHuesped;
-        private ToolStripMenuItem eliminarHuspedToolStripMenuItem;
         private ToolStripMenuItem reporteDeHotelToolStripMenuItem;
         private ToolStripMenuItem verReporteToolStripMenuItem;
         private ToolStripMenuItem habitacionesToolStripMenuItem;

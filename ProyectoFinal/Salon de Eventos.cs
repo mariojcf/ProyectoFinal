@@ -20,9 +20,9 @@ namespace ProyectoFinal
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Reservacion nuevoSalon = new Reservacion(txtNombreCompleto.Text, txtTelefono.Text);
-            Nodo nuevonodo1 = new Nodo(nuevoSalon);
-            Form1.instance.getlistaSalon().Insertar(nuevonodo1);
+            Reservacion nuevoSalon1 = new Reservacion(txtNombreCompleto.Text, txtTelefono.Text);
+            Nodo nuevonodo1 = new Nodo(nuevoSalon1);
+            Form1.instance.getlistaSalon().InsertarSalon(nuevonodo1);
             //Los textBox
             string nombreCompleto = txtNombreCompleto.Text;
             string telefono = txtTelefono.Text;
