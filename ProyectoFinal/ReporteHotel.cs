@@ -15,10 +15,13 @@ namespace ProyectoFinal
         public ReporteHotel()
         {
             InitializeComponent();
+           
         }
 
         private void VerReporte_Click(object sender, EventArgs e)
         {
+            Registrar registrar = new Registrar();
+  
 
         }
     }

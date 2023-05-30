@@ -13,7 +13,8 @@ namespace ProyectoFinal
 {
     public partial class Registrar : Form
     {
-
+        private const decimal CostoSimple = 12;
+        private const decimal CostoDoble = 20;
         bool verificado;
         public Registrar()
         {
@@ -31,9 +32,33 @@ namespace ProyectoFinal
             DateTime fechaSalida = dtFechaSalida.Value;
             int numPersonas = (int)chkAdultos.Value;
             int tieneNinos = (int)chkNinos.Value;
-            int número = chkAdultos;
+            
             // Calcular la cantidad de noches que se van a hospedar
             DateTime total = dtFechaIngreso.Value;
+            int noches = (int)chkAdultos.Value;
+            noches = noches + 1;
+            // Calcular el costo total
+            decimal costoTotal = 0;
+
+            if (noches < 7)
+            {
+                // Habitación simple
+                costoTotal = noches * CostoSimple;
+            }
+            else if (noches > 8)
+            {
+                // Habitación doble
+                costoTotal = noches * CostoDoble;
+            }
+            else
+            {
+                // No se seleccionó ninguna opción
+                MessageBox.Show("Por favor, seleccione el tipo de habitación.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Mostrar el costo total en un MessageBox
+            MessageBox.Show($"El costo total de {noches} noches de hospedaje es: USD {costoTotal}", "Costo de Hospedaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             //Recordatorio 
             lblRecordatorio.Text = "El check-in para las habitaciones es a las 15hrs y el check-out es a las 13hrs.";
