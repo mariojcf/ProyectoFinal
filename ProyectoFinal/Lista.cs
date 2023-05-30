@@ -97,8 +97,8 @@ namespace ProyectoFinal
 
             do
             {
-                Husped huesped = actual.getHuesped();
-                message += "Nombre Huesped:\t" + huesped.getNombre() + " \nNumero de telefono:\t" + huesped.getNumero() + "\n\n";
+                Reservacion Salon = actual.getReservacion();
+                message += "Nombre Huesped:\t" + Salon.getNombre() + " \nNumero de telefono:\t" + Salon.getNumero() + "\n\n";
                 actual = actual.getSiguiente();
 
             } while (actual != null && actual != cabeza);
