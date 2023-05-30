@@ -162,7 +162,7 @@ namespace ProyectoFinal
                             //anterior.setSiguiente(anterior) = actual.getSiguiente();
                             actual.getSiguiente().setSiguiente(anterior);
                         }
-                        Console.WriteLine("\n Nodo eliminado con exito\n");
+                        Console.WriteLine("\n Huesped eliminado con exito\n");
                         encontrado = true;
                     }
                     anterior = actual;
@@ -170,7 +170,7 @@ namespace ProyectoFinal
                 } while (actual != cabeza && encontrado != true);
                 if (!encontrado)
                 {
-                    Console.WriteLine("\n No encontrado");
+                    Console.WriteLine("\n Huesped No encontrado");
                 }
             }
             else
@@ -208,7 +208,7 @@ namespace ProyectoFinal
                             //anterior.setSiguiente(anterior) = actual.getSiguiente();
                             actual.getSiguiente().setSiguiente(anterior);
                         }
-                        Console.WriteLine("\n Nodo eliminado con exito\n");
+                        Console.WriteLine("\n Evento eliminado con exito\n");
                         encontrado = true;
                     }
                     anterior = actual;
@@ -216,12 +216,12 @@ namespace ProyectoFinal
                 } while (actual != cabeza && encontrado != true);
                 if (!encontrado)
                 {
-                    Console.WriteLine("\n No encontrado");
+                    Console.WriteLine("\n Evento No encontrado.");
                 }
             }
             else
             {
-                Console.WriteLine("\n La lista se encuentra vacía");
+                Console.WriteLine("\n No se encuentra registrado ningun evento.");
             }
         }
     }
