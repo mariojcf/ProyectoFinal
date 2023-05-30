@@ -20,10 +20,15 @@ namespace ProyectoFinal
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            Reservacion nuevoSalon = new Reservacion(txtNombreCompleto.Text, txtTelefono.Text);
+            Nodo nuevonodo1 = new Nodo(nuevoSalon);
+            Form1.instance.getlistaSalon().Insertar(nuevonodo1);
+            //Los textBox
             string nombreCompleto = txtNombreCompleto.Text;
             string telefono = txtTelefono.Text;
             MonthCalendar calendario = mtCIngreso;
             int numPersonas = (int)chkPersonas.Value;
+            string salon = clbSalon.Text;
             //Recordatorio 
             lblAnuncio.Text = "Horarios de uso de 8 a 12 hrs y de 14hrs a 18hrs.";
             lblAnuncio.Visible = true;
@@ -34,10 +39,10 @@ namespace ProyectoFinal
                 MessageBox.Show("Por favor ingrese su nombre completo y número de teléfono.");
                 return;
             }
-
+           
             // Mostrar un mensaje de confirmación con los detalles del registro
-            string mensaje = string.Format("¡Reserva exitosamente guardada!\n\nNombre completo: {0}\nTeléfono: {1}\nFecha de ingreso: {2}\nNúmero de personas: {3}",
-                nombreCompleto, telefono, calendario.SelectionRange.Start.Date.ToShortDateString(), numPersonas);
+            string mensaje = string.Format("¡Reserva exitosamente guardada!\n\nNombre completo: {0}\nTeléfono: {1}\nFecha de ingreso: {2}\nNúmero de personas: {3}\nSalon escogido: {4}",
+                nombreCompleto, telefono, calendario.SelectionRange.Start.Date.ToShortDateString(), numPersonas, salon);
             string mensaje2 = string.Format("");
             MessageBox.Show(mensaje);
         }

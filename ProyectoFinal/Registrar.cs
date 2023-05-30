@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,9 @@ namespace ProyectoFinal
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            Husped nuevohuesped = new Husped(txtNombreCompleto.Text,txtCorreo.Text,txtTelefono.Text);
+            Nodo nuevonodo = new Nodo(nuevohuesped);
+            Form1.instance.getlistaHuesped().Insertar(nuevonodo);
             // Obtener los valores ingresados por el usuario
             string nombreCompleto = txtNombreCompleto.Text;
             string telefono = txtTelefono.Text;
@@ -32,7 +36,7 @@ namespace ProyectoFinal
             DateTime fechaSalida = dtFechaSalida.Value;
             int numPersonas = (int)chkAdultos.Value;
             int tieneNinos = (int)chkNinos.Value;
-            
+
             // Calcular la cantidad de noches que se van a hospedar
             DateTime total = dtFechaIngreso.Value;
             int noches = (int)chkAdultos.Value;

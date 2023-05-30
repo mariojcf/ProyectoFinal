@@ -29,147 +29,170 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Salon_de_Eventos));
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.chkPersonas = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblNumero = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombreCompleto = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.mtCIngreso = new System.Windows.Forms.MonthCalendar();
-            this.lblAnuncio = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.chkPersonas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            btnGuardar = new Button();
+            chkPersonas = new NumericUpDown();
+            label1 = new Label();
+            lblNumero = new Label();
+            txtTelefono = new TextBox();
+            lblNombre = new Label();
+            txtNombreCompleto = new TextBox();
+            pictureBox1 = new PictureBox();
+            label3 = new Label();
+            mtCIngreso = new MonthCalendar();
+            lblAnuncio = new Label();
+            clbSalon = new CheckedListBox();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)chkPersonas).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.btnGuardar.Location = new System.Drawing.Point(58, 307);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(126, 40);
-            this.btnGuardar.TabIndex = 25;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            btnGuardar.Font = new Font("Segoe UI", 13.8F, FontStyle.Italic, GraphicsUnit.Point);
+            btnGuardar.Location = new Point(58, 307);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(126, 40);
+            btnGuardar.TabIndex = 25;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // chkPersonas
             // 
-            this.chkPersonas.Location = new System.Drawing.Point(362, 140);
-            this.chkPersonas.Name = "chkPersonas";
-            this.chkPersonas.Size = new System.Drawing.Size(91, 27);
-            this.chkPersonas.TabIndex = 23;
+            chkPersonas.Location = new Point(362, 140);
+            chkPersonas.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
+            chkPersonas.Name = "chkPersonas";
+            chkPersonas.Size = new Size(91, 27);
+            chkPersonas.TabIndex = 23;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(58, 212);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 25);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Fecha de Ingreso";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(58, 212);
+            label1.Name = "label1";
+            label1.Size = new Size(147, 25);
+            label1.TabIndex = 20;
+            label1.Text = "Fecha de Ingreso";
             // 
             // lblNumero
             // 
-            this.lblNumero.AutoSize = true;
-            this.lblNumero.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNumero.Location = new System.Drawing.Point(56, 77);
-            this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(173, 25);
-            this.lblNumero.TabIndex = 18;
-            this.lblNumero.Text = "Numero de telefono";
+            lblNumero.AutoSize = true;
+            lblNumero.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNumero.Location = new Point(56, 56);
+            lblNumero.Name = "lblNumero";
+            lblNumero.Size = new Size(173, 25);
+            lblNumero.TabIndex = 18;
+            lblNumero.Text = "Numero de telefono";
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(362, 78);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(238, 27);
-            this.txtTelefono.TabIndex = 17;
+            txtTelefono.Location = new Point(362, 57);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(238, 27);
+            txtTelefono.TabIndex = 17;
             // 
             // lblNombre
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNombre.Location = new System.Drawing.Point(56, 19);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(162, 25);
-            this.lblNombre.TabIndex = 16;
-            this.lblNombre.Text = "Nombre Completo";
+            lblNombre.AutoSize = true;
+            lblNombre.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNombre.Location = new Point(56, 19);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new Size(162, 25);
+            lblNombre.TabIndex = 16;
+            lblNombre.Text = "Nombre Completo";
             // 
             // txtNombreCompleto
             // 
-            this.txtNombreCompleto.Location = new System.Drawing.Point(362, 17);
-            this.txtNombreCompleto.Name = "txtNombreCompleto";
-            this.txtNombreCompleto.Size = new System.Drawing.Size(238, 27);
-            this.txtNombreCompleto.TabIndex = 15;
+            txtNombreCompleto.Location = new Point(362, 17);
+            txtNombreCompleto.Name = "txtNombreCompleto";
+            txtNombreCompleto.Size = new Size(238, 27);
+            txtNombreCompleto.TabIndex = 15;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(684, 451);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(2, 1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(686, 443);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 28;
+            pictureBox1.TabStop = false;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(56, 151);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 25);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Personas a Asistir";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(56, 151);
+            label3.Name = "label3";
+            label3.Size = new Size(149, 25);
+            label3.TabIndex = 24;
+            label3.Text = "Personas a Asistir";
             // 
             // mtCIngreso
             // 
-            this.mtCIngreso.Location = new System.Drawing.Point(341, 200);
-            this.mtCIngreso.Name = "mtCIngreso";
-            this.mtCIngreso.TabIndex = 29;
+            mtCIngreso.Location = new Point(341, 200);
+            mtCIngreso.Name = "mtCIngreso";
+            mtCIngreso.TabIndex = 29;
             // 
             // lblAnuncio
             // 
-            this.lblAnuncio.AutoSize = true;
-            this.lblAnuncio.Font = new System.Drawing.Font("Centaur", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAnuncio.Location = new System.Drawing.Point(81, 412);
-            this.lblAnuncio.Name = "lblAnuncio";
-            this.lblAnuncio.Size = new System.Drawing.Size(82, 32);
-            this.lblAnuncio.TabIndex = 30;
-            this.lblAnuncio.Text = "label2";
-            this.lblAnuncio.Visible = false;
+            lblAnuncio.AutoSize = true;
+            lblAnuncio.Font = new Font("Centaur", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAnuncio.Location = new Point(81, 412);
+            lblAnuncio.Name = "lblAnuncio";
+            lblAnuncio.Size = new Size(82, 32);
+            lblAnuncio.TabIndex = 30;
+            lblAnuncio.Text = "label2";
+            lblAnuncio.Visible = false;
+            // 
+            // clbSalon
+            // 
+            clbSalon.FormattingEnabled = true;
+            clbSalon.Items.AddRange(new object[] { "Salón luna ", "Salón sol " });
+            clbSalon.Location = new Point(362, 108);
+            clbSalon.Name = "clbSalon";
+            clbSalon.Size = new Size(146, 26);
+            clbSalon.TabIndex = 31;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(56, 108);
+            label2.Name = "label2";
+            label2.Size = new Size(133, 25);
+            label2.TabIndex = 32;
+            label2.Text = "Escoga el salon";
             // 
             // Salon_de_Eventos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 450);
-            this.Controls.Add(this.lblAnuncio);
-            this.Controls.Add(this.mtCIngreso);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.chkPersonas);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblNumero);
-            this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.txtNombreCompleto);
-            this.Controls.Add(this.pictureBox1);
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(708, 497);
-            this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(708, 497);
-            this.Name = "Salon_de_Eventos";
-            this.Text = "Salon_de_Eventos";
-            ((System.ComponentModel.ISupportInitialize)(this.chkPersonas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(690, 450);
+            Controls.Add(label2);
+            Controls.Add(clbSalon);
+            Controls.Add(lblAnuncio);
+            Controls.Add(mtCIngreso);
+            Controls.Add(btnGuardar);
+            Controls.Add(label3);
+            Controls.Add(chkPersonas);
+            Controls.Add(label1);
+            Controls.Add(lblNumero);
+            Controls.Add(txtTelefono);
+            Controls.Add(lblNombre);
+            Controls.Add(txtNombreCompleto);
+            Controls.Add(pictureBox1);
+            MaximizeBox = false;
+            MaximumSize = new Size(708, 497);
+            MinimizeBox = false;
+            MinimumSize = new Size(708, 497);
+            Name = "Salon_de_Eventos";
+            Text = "Salon_de_Eventos";
+            ((System.ComponentModel.ISupportInitialize)chkPersonas).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -184,5 +207,7 @@
         private Label label3;
         private MonthCalendar mtCIngreso;
         private Label lblAnuncio;
+        private CheckedListBox clbSalon;
+        private Label label2;
     }
 }

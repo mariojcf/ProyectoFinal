@@ -3,33 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ProyectoFinal
 {
     public class Nodo
     {
-        private Cliente inf;
+        private Salon_de_Eventos Salon;
+        private Husped value;
         private Nodo siguiente;
         private Nodo anterior;
 
-        public Nodo(Cliente inf) {
-            this.inf = inf;
+        public Nodo(Husped value) {
+            this.value = value;
             this.siguiente = null;
             this.anterior = null;
         }
-        public Nodo Siguiente
+        public Nodo(Salon_de_Eventos Salon)
         {
-            get { return siguiente; }
-            set { siguiente = value; }
+            this.Salon = Salon;
+            this.siguiente = null;
+            this.anterior = null;
         }
-        public Nodo Atras
-        {
-            get { return anterior; }
-            set { anterior = value; }
-        }
-        public Cliente getCliente() { return this.inf; }
-        public void setCliente(Cliente value) {this.inf = value; }
+        public Husped getHuesped() { return this.value; }
+        public void setHuesped(Husped value) {this.value = value; }
+        public Husped getSalon_de_Eventos() { return this.value; }
+        public void setSalon_de_Eventos(Salon_de_Eventos value) { this.Salon = Salon; }
+        public Nodo getSiguiente() { return this.siguiente; }
+        public void setSiguiente(Nodo siguiente) { this.siguiente = siguiente; }
 
+        public Nodo getAnterior() { return this.anterior; }
+        public void setAnterior(Nodo anterior) { this.anterior = anterior; }
 
     }
 }

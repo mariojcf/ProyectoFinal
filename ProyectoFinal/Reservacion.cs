@@ -6,51 +6,32 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinal
 {
-    internal class Reservacion
+    public class Reservacion
     {
-        private int FechadeInicio;
-        private int FechadeSalida;
-        private int CantidadPersonas;
-        private int CantidadHabitaciones;
+        private string nombre;
+        private string numero;
 
-        public Reservacion(int CantidadPersonas, int CantidadHabitaciones, int FechadeInicio, int FechadeSalida) { 
-            this.CantidadHabitaciones = CantidadHabitaciones;
-            this.CantidadPersonas = CantidadPersonas;
-            this.FechadeInicio = FechadeInicio;
-            this.FechadeSalida = FechadeSalida;
+        public Reservacion(string nombre, string numero) {
+            this.nombre = nombre;
+            this.numero = numero;
         }
-        public int getFechadeInicio()
+        public string getNombre()
         {
-            return this.FechadeInicio;
+            return this.nombre;
         }
-        public int getFechadeSalida()
+        public string getNumero()
         {
-            return this.FechadeSalida;
+            return this.numero;
         }
-        public int setFechadeInicio()
+        public string setNombre()
         {
-            return this.CantidadPersonas;
+            return this.nombre;
         }
-        public int setFechadeSalida()
+        public string setNumero()
         {
-            return this.FechadeSalida;
+            return this.numero;
         }
 
-        public int getCantidadPersonas()
-        {
-            return this.CantidadPersonas;
-        }
-        public int getCantidadHabitaciones()
-        {
-            return CantidadHabitaciones;
-        }
-        public int setCantidadPersonas()
-        {
-            return this.CantidadPersonas;
-        }
-        public int setCantidadHabitaciones()
-        {
-            return this.CantidadHabitaciones;
-        }
+       
     }
 }

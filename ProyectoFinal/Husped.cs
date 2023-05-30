@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinal
 {
-    internal class Husped
+    public class Husped
     {
         private String nombre;
         private String correo;
-        private int numero; 
+        private String numero; 
 
-        public Husped(String nombre, String correo, int numero)
+        public Husped(String nombre, String correo, string numero)
         {
             this.nombre = nombre;
             this.correo = correo;
@@ -27,7 +27,7 @@ namespace ProyectoFinal
         {
             return correo;
         }
-        public int getNumero()
+        public String getNumero()
         {
             return numero;
         }
@@ -39,7 +39,7 @@ namespace ProyectoFinal
         {
             return correo;
         }
-        public int SetNumero()
+        public String SetNumero()
         {
             return numero;
         }

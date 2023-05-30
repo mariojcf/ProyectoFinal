@@ -20,9 +20,12 @@ namespace ProyectoFinal
 
         private void VerReporte_Click(object sender, EventArgs e)
         {
-            Registrar registrar = new Registrar();
-  
-
+            string mensaje = "";
+            string ojomensaje = "";
+            mensaje += Form1.instance.listaHuesped.mostrarLista();
+            ojomensaje += Form1.instance.listaSalon.mostrarListaSalon();
+            MessageBox.Show(mensaje);
+            MessageBox.Show(ojomensaje);
         }
     }
 }

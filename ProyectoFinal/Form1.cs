@@ -4,11 +4,23 @@ namespace ProyectoFinal
 {
     public partial class Form1 : Form
     {
+        public static Form1 instance = new Form1();
+        public Lista listaHuesped = new Lista("listaHuesped");
+        public Lista listaSalon = new Lista("listaSalon");
+
         public Form1()
         {
             InitializeComponent();
+            instance = this;
         }
-
+        public Lista getlistaHuesped()
+        {
+            return listaHuesped;
+        }
+        public Lista getlistaSalon()
+        {
+            return listaSalon;
+        }
         private void RegistrarHuesped_Click(object sender, EventArgs e)
         {
             Registrar registrar = new Registrar();
