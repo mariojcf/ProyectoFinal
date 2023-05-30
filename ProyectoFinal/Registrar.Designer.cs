@@ -142,7 +142,7 @@
             // btnRegistrar
             // 
             btnRegistrar.Font = new Font("Segoe UI", 13.8F, FontStyle.Italic, GraphicsUnit.Point);
-            btnRegistrar.Location = new Point(430, 434);
+            btnRegistrar.Location = new Point(447, 454);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(126, 40);
             btnRegistrar.TabIndex = 12;

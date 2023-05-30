@@ -31,8 +31,10 @@ namespace ProyectoFinal
             DateTime fechaSalida = dtFechaSalida.Value;
             int numPersonas = (int)chkAdultos.Value;
             int tieneNinos = (int)chkNinos.Value;
+            int número = chkAdultos;
             // Calcular la cantidad de noches que se van a hospedar
-            int noches = (int)(fechaSalida - fechaIngreso).TotalDays;
+            DateTime total = dtFechaIngreso.Value;
+
             //Recordatorio 
             lblRecordatorio.Text = "El check-in para las habitaciones es a las 15hrs y el check-out es a las 13hrs.";
             lblRecordatorio.Visible = true;
@@ -125,5 +127,7 @@ namespace ProyectoFinal
                 MessageBox.Show("El número de teléfono es válido.", "Validación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+
     }
 }

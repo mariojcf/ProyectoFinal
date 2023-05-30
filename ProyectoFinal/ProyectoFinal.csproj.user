@@ -4,6 +4,9 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Intento.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Registrar.cs">
       <SubType>Form</SubType>
     </Compile>
