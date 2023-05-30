@@ -77,9 +77,7 @@ namespace ProyectoFinal
         public string mostrarLista()
         {
             String message = "";
-
             Nodo actual = this.cabeza;
-
             do
             {
                 Husped huesped = actual.getHuesped();
@@ -92,15 +90,12 @@ namespace ProyectoFinal
         public string mostrarListaSalon()
         {
             String message = "";
-
             Nodo actual = this.cabeza;
-
             do
             {
                 Reservacion Salon = actual.getReservacion();
-                message += "Nombre Huesped:\t" + Salon.getNombre() + " \nNumero de telefono:\t" + Salon.getNumero() + "\n\n";
+                message += "Nombre de la reservacion:\t" + Salon.getNombre() + " \nNumero de telefono:\t" + Salon.getNumero() + "\n\n";
                 actual = actual.getSiguiente();
-
             } while (actual != null && actual != cabeza);
             return message;
         }
@@ -118,17 +113,16 @@ namespace ProyectoFinal
                 }
                 actual = actual.getSiguiente();
             } while (actual != null && actual != cabeza);
-
             return exists;
         }
-        public bool BuscarSalon(String buscarHues)
+        public bool BuscarSalon(String buscarSalon)
         {
             bool exists = false;
             Nodo actual = this.cabeza;
             do
             {
-                Husped huesped = actual.getHuesped();
-                if (huesped.getNombre() == buscarHues)
+                Reservacion salon = actual.getReservacion();
+                if (salon.getNombre() == buscarSalon)
                 {
                     exists = true;
                     break;

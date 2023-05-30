@@ -27,11 +27,10 @@ namespace ProyectoFinal
         }
         public Husped getHuesped() { return this.value; }
         public void setHuesped(Husped value) {this.value = value; }
-        public Husped getReservacion() { return this.value; }
+        public Reservacion getReservacion() { return this.Salon; }
         public void setReservacion(Reservacion value) { this.Salon = Salon; }
         public Nodo getSiguiente() { return this.siguiente; }
         public void setSiguiente(Nodo siguiente) { this.siguiente = siguiente; }
-
         public Nodo getAnterior() { return this.anterior; }
         public void setAnterior(Nodo anterior) { this.anterior = anterior; }
 
