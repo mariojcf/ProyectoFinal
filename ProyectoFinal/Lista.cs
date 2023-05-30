@@ -138,7 +138,6 @@ namespace ProyectoFinal
             Nodo actual = this.cabeza;
             Nodo anterior = null;
             bool encontrado = false;
-            //int buscar = posicion;
             if (actual != null)
             {
                 do
@@ -160,7 +159,53 @@ namespace ProyectoFinal
                         }
                         else
                         {
-                            anterior.getSiguiente() = actual.setSiguiente(actual);
+                            //anterior.setSiguiente(anterior) = actual.getSiguiente();
+                            actual.getSiguiente().setSiguiente(anterior);
+                        }
+                        Console.WriteLine("\n Nodo eliminado con exito\n");
+                        encontrado = true;
+                    }
+                    anterior = actual;
+                    actual = actual.getSiguiente();
+                } while (actual != cabeza && encontrado != true);
+                if (!encontrado)
+                {
+                    Console.WriteLine("\n No encontrado");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\n La lista se encuentra vacía");
+            }
+        }
+        public void eliminarSalon(String Eliminar)
+        {
+            String message = "";
+            Nodo actual = this.cabeza;
+            Nodo anterior = null;
+            bool encontrado = false;
+            if (actual != null)
+            {
+                do
+                {
+                    Reservacion reservacion = actual.getReservacion();
+                    if (reservacion.getNombre() == Eliminar)
+                    {
+                        if (actual == cabeza)
+                        {
+                            cabeza = cabeza.getSiguiente();
+                            cabeza.setSiguiente(cola);
+                            cola.setSiguiente(cabeza);
+                        }
+                        else if (actual == cola)
+                        {
+                            cola = anterior;
+                            anterior.setSiguiente(cabeza);
+                            cabeza.setAnterior(cola);
+                        }
+                        else
+                        {
+                            //anterior.setSiguiente(anterior) = actual.getSiguiente();
                             actual.getSiguiente().setSiguiente(anterior);
                         }
                         Console.WriteLine("\n Nodo eliminado con exito\n");
